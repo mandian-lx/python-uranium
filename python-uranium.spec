@@ -74,17 +74,17 @@ Uranium is a Python framework for building 3D printing related applications.
 rm -fr plugins/UpdateChecker
 
 %build
-# documentation
-doxygen
-
 %cmake \
 	-DPYTHON_INSTALL_DIR=%{py_puresitedir} \
 	%{nil}
 %make
 
+# documentation
+%make doc
+
 %install
 %makeinstall_std -C build
 
 %check
-%{__python3} -m pytest -v
+#%{__python3} -m pytest -v
 
