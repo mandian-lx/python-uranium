@@ -16,7 +16,7 @@ BuildArch:	noarch
 BuildRequires:	cmake
 BuildRequires:	doxygen
 BuildRequires:	graphviz
-BuildRequires:	python
+BuildRequires:	pkgconfig(python)
 # tests
 BuildRequires:	python-arcus = %{version}
 BuildRequires:	python-numpy
