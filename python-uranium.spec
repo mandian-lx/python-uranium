@@ -51,7 +51,7 @@ Provides:	python-%{lname} = %{version}-%{release}
 %description -n python-%{lname}
 Uranium is a Python framework for building 3D printing related applications.
 
-%files -n python-%{lname}
+%files -n python-%{lname} -f %{name}.lang
 %{_datadir}/%{lname}/
 %{_datadir}/cmake/Modules/%{oname}*cmake
 %{py_puresitedir}/UM/
@@ -84,6 +84,16 @@ rm -fr plugins/UpdateChecker
 
 %install
 %makeinstall_std -C build
+
+# Fix locales files path
+mv %{buildroot}%{_datadir}/%{lname}/resources/i18n %{buildroot}%{_datadir}/locale
+ln -s ../../locale %{buildroot}%{_datadir}/%{lname}/resources/i18n
+
+# Only .mo files are used
+find . -name \*po -or -name \*pot -delete
+
+# locales
+%find_lang %{name} --all-name
 
 %check
 #%{__python3} -m pytest -v
