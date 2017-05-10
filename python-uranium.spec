@@ -90,7 +90,7 @@ mv %{buildroot}%{_datadir}/%{lname}/resources/i18n %{buildroot}%{_datadir}/local
 ln -s ../../locale %{buildroot}%{_datadir}/%{lname}/resources/i18n
 
 # Only .mo files are used
-find . -name \*po -or -name \*pot -delete
+find %{buildroot}%{_datadir}/locale -name \*po -or -name \*pot -delete
 
 # locales
 %find_lang %{name} --all-name
