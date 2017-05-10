@@ -1,0 +1,17 @@
+--- Uranium-2.5.0/CMakeLists.txt.orig
++++ Uranium-2.5.0/CMakeLists.txt
+@@ -46,11 +46,11 @@
+ if(APPLE OR WIN32)
+     install(DIRECTORY UM DESTINATION lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages)
+ else()
+-    install(DIRECTORY UM DESTINATION lib/python${PYTHON_VERSION_MAJOR}/dist-packages)
++    install(DIRECTORY UM DESTINATION ${PYTHON_INSTALL_DIR})
+ endif()
+ install(FILES ${CMAKE_SOURCE_DIR}/cmake/UraniumTranslationTools.cmake
+-        DESTINATION ${CMAKE_INSTALL_DATADIR}/cmake-${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}/Modules/ )
++        DESTINATION ${CMAKE_INSTALL_DATADIR}/cmake/Modules/ )
+ install(DIRECTORY resources DESTINATION ${CMAKE_INSTALL_DATADIR}/uranium)
+-install(DIRECTORY plugins DESTINATION lib/uranium)
++install(DIRECTORY plugins DESTINATION ${PYTHON_INSTALL_DIR}/UM/)
+ 
+ include(CPackConfig.cmake)

@@ -1,0 +1,11 @@
+--- Uranium-2.5.0/UM/Application.py.plugin
++++ Uranium-2.5.0/UM/Application.py
+@@ -101,7 +101,7 @@
+         self._plugin_registry.addPluginLocation(local_path)
+ 
+         if not hasattr(sys, "frozen"):
+-            self._plugin_registry.addPluginLocation(os.path.join(os.path.abspath(os.path.dirname(__file__)), "..", "plugins"))
++            self._plugin_registry.addPluginLocation(os.path.join(os.path.abspath(os.path.dirname(__file__)), "plugins"))
+ 
+         self._plugin_registry.setApplication(self)
+ 
