@@ -13,15 +13,28 @@ Patch0:		%{oname}-2.5.0-CMakeLists.patch
 Patch1:		%{oname}-2.5.0-plugins.patch
 BuildArch:	noarch
 
-BuildRequires:	python
+BuildRequires:	cmake
 BuildRequires:	doxygen
 BuildRequires:	graphviz
-BuildRequires:	python-pytest
+BuildRequires:	python
+# tests
+BuildRequires:	python-arcus = %{version}
+BuildRequires:	python-numpy
+BuildRequires:  python-pytest
+BuildRequires:	python-qt5-core
+BuildRequires:	python-qt5-gui
+BuildRequires:	python-qt5-opengl
+BuildRequires:	python-qt5-qml
+BuildRequires:	python-qt5-widgets
+BuildRequires:	python-qt5-qml
+BuildRequires:	python-qt5-quick
+BuildRequires:	python-qt5-quickwidgets
+BuildRequires:	python-qt5-svg
+BuildRequires:	python-scipy
 
 Requires:	python
-Requires:	python-arcus
+Requires:	python-arcus = %{version}
 Requires:	python-numpy
-Requires:	python-scipy
 #Requires:	python-qt5
 Requires:	python-qt5-core
 Requires:	python-qt5-gui
