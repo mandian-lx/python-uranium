@@ -4,7 +4,7 @@
 Summary:	A Python framework for building 3D printing related applications
 Name:		%{oname}
 Version:	2.5.0	
-Release:	0
+Release:	1
 License:	AGPLv3+
 Group:		Development/Python
 URL:		https://github.com/Ultimaker/%{name}
