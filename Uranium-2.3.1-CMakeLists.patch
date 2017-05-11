@@ -1,5 +1,5 @@
---- Uranium-2.5.0/CMakeLists.txt.orig
-+++ Uranium-2.5.0/CMakeLists.txt
+--- Uranium-2.3.1/CMakeLists.txt.orig
++++ Uranium-2.3.1/CMakeLists.txt
 @@ -46,11 +46,11 @@
  if(APPLE OR WIN32)
      install(DIRECTORY UM DESTINATION lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages)

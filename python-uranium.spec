@@ -3,14 +3,14 @@
 
 Summary:	A Python framework for building 3D printing related applications
 Name:		%{oname}
-Version:	2.5.0	
+Version:	2.3.1
 Release:	1
 License:	AGPLv3+
 Group:		Development/Python
 URL:		https://github.com/Ultimaker/%{name}
 Source0:	https://github.com/Ultimaker/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
-Patch0:		%{oname}-2.5.0-CMakeLists.patch
-Patch1:		%{oname}-2.5.0-plugins.patch
+Patch0:		%{oname}-2.3.1-CMakeLists.patch
+Patch1:		%{oname}-2.3.1-plugins.patch
 BuildArch:	noarch
 
 BuildRequires:	cmake

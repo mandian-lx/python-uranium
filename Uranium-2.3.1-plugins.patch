@@ -1,5 +1,5 @@
---- Uranium-2.5.0/UM/Application.py.plugin
-+++ Uranium-2.5.0/UM/Application.py
+--- Uranium-2.3.1/UM/Application.py.plugin
++++ Uranium-2.3.1/UM/Application.py
 @@ -101,7 +101,7 @@
          self._plugin_registry.addPluginLocation(local_path)
  
